@@ -1,0 +1,51 @@
+{
+    "name": "bricks-grid",
+    "labelKey": "bricks",
+    "definition": {
+        "entity": "MetaBrick",
+        "type": "grid",
+        "fields": [
+            {
+                "name": "code",
+                "labelKey": "code"
+            },
+            {
+                "name": "description",
+                "labelKey": "description"
+            },
+            {
+                "name": "brickVersion",
+                "labelKey": "version",
+                "type": "number"
+            },
+            {
+                "name": "autoInstall",
+                "labelKey": "auto-install",
+                "type": "boolean"
+            }
+        ],
+        "sorts": [
+            {
+                "field": "description",
+                "direction": "ASC"
+            }
+        ]
+    },
+    "options": {
+        "enableMultiSelect": false
+    },
+    "actions": {
+        "open": {
+            "view": "bricks-form",
+            "enableDoubleClick": true,
+            "enableRowButton": true
+        },
+        "archive": {
+            "enableToolbarButton": true,
+            "enableRowButton": true
+        },
+        "refresh": {
+            "enableToolbarButton": true
+        }
+    }
+}

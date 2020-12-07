@@ -1,0 +1,48 @@
+{
+    "name": "bricks-form",
+    "labelKey": "brick",
+    "definition": {
+        "entity": "MetaBrick",
+        "type": "form",
+        "containers": [
+            {
+                "cols": 12,
+                "showTitle": false,
+                "fields": [
+                    {
+                        "name": "description",
+                        "labelKey": "description",
+                        "cols": 12,
+                        "type": "string"
+                    },
+                    {
+                        "name": "code",
+                        "labelKey": "code",
+                        "cols": 4,
+                        "type": "string"
+                    },
+                    {
+                        "name": "brickVersion",
+                        "labelKey": "version",
+                        "cols": 4,
+                        "type": "string"
+                    },
+                    {
+                        "name": "autoInstall",
+                        "labelKey": "auto-install",
+                        "cols": 4,
+                        "type": "switch"
+                    }
+                ]
+            }
+        ]
+    },
+    "actions": {
+        "archive": {
+            "enableToolbarButton": true
+        },
+        "refresh": {
+            "enableToolbarButton": true
+        }
+    }
+}

@@ -1,0 +1,3 @@
+importId;labelKey;icon;color;viewName;$parent;orderPriority;$role
+1;menu-admin;mdi-tune;tertiary;;;1;ADMIN
+2;menu-admin-bricks;mdi-toy-brick;;bricks-grid;1;10;

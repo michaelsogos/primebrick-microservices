@@ -1,0 +1,6 @@
+key;languageCode;value;isTemplate;group
+menu-admin-bricks;it;Moduli;false;
+description;it;Descrizione;false;
+code;it;Codice;false;
+version;it;Versione;false;
+auto-install;it;Auto Installante;false;
