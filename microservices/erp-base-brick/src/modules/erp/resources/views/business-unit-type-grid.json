@@ -1,0 +1,45 @@
+{
+    "name": "business-unit-type-grid",
+    "labelKey": "business_unit_types",
+    "definition": {
+        "entity": "BusinessUnitType",
+        "type": "grid",
+        "fields": [
+            {
+                "name": "name",
+                "labelKey": "name"
+            },
+            {
+                "name": "value",
+                "labelKey": "value"
+            }
+        ],
+        "sorts": [
+            {
+                "field": "name",
+                "direction": "ASC"
+            }
+        ]
+    },
+    "options": {
+        "enableMultiSelect": false
+    },
+    "actions": {
+        "edit": {
+            "view": "business-unit-type-form",
+            "enableDoubleClick": true,
+            "enableRowButton": true
+        },
+        "add": {
+            "view": "business-unit-type-form",
+            "enableToolbarButton": true
+        },
+        "archive": {
+            "enableToolbarButton": true,
+            "enableRowButton": true
+        },
+        "refresh": {
+            "enableToolbarButton": true
+        }
+    }
+}

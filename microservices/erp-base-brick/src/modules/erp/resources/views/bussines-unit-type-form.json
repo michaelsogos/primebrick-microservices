@@ -1,0 +1,51 @@
+{
+    "name": "business-unit-type-form",
+    "labelKey": "business_unit_type",
+    "definition": {
+        "entity": "BusinessUnitType",
+        "type": "form",
+        "containers": [
+            {
+                "cols": 12,
+                "showTitle": false,
+                "fields": [
+                    {
+                        "name": "name",
+                        "labelKey": "name",
+                        "cols": 6,
+                        "type": "string",
+                        "validationRules": [
+                            {
+                                "rule": "required",
+                                "labelKey": "field_required"
+                            }
+                        ],
+                        "translatable": false
+                    },
+                    {
+                        "name": "value",
+                        "labelKey": "value",
+                        "cols": 6,
+                        "validationRules": [
+                            {
+                                "rule": "required",
+                                "labelKey": "field_required"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "actions": {
+        "save": {
+            "enableToolbarButton": true
+        },
+        "archive": {
+            "enableToolbarButton": true
+        },
+        "refresh": {
+            "enableToolbarButton": true
+        }
+    }
+}
