@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { TenantRepositoryService, MessagePayload } from 'primebrick-sdk';
+import { Company } from './entities/Company.entity';
 
 @Injectable()
 export class ErpService {
@@ -17,4 +18,9 @@ export class ErpService {
     //   await saleOrderRepository.save(saleOrder);
     //   return true;
     // }
+
+    async getAllCompanies(): Promise<Company[]> {
+        const repo = await this.repositoryService.getTenantRepository(Company);
+        return await repo.find();
+    }
 }

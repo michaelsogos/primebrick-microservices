@@ -595,7 +595,7 @@
     webpack "4.44.1"
     webpack-node-externals "2.5.1"
 
-"@nestjs/common@7.5.1", "@nestjs/common@^7.5.1":
+"@nestjs/common@7.5.1":
   version "7.5.1"
   resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.5.1.tgz#a4bbe1f69f48d0f46839f5e26d9cb244bb4db3bf"
   integrity sha512-UKTWa/MFTryRm4L9b+lsKFg+m/B4zDCsx/pQAMZVCYMW4FRg6QH4BIaq5fMz5G2hL5IFlFVoOC/eXJwhGDOrYA==
@@ -616,7 +616,7 @@
     lodash.set "4.3.2"
     uuid "8.1.0"
 
-"@nestjs/core@7.5.1", "@nestjs/core@^7.5.1":
+"@nestjs/core@7.5.1":
   version "7.5.1"
   resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.5.1.tgz#5de809d85fb5d3bbb008fffeb4297c3bb5591aa9"
   integrity sha512-aJ1w5tQPkVEmH5QRe1echV5NFWAcHAVQJX/jvfCSK4M5VSkIBN9zreZg8UnYf8sbW5YEaizPts07veeTPsG3FQ==
@@ -629,7 +629,7 @@
     tslib "2.0.3"
     uuid "8.3.1"
 
-"@nestjs/microservices@7.5.1", "@nestjs/microservices@^7.5.1":
+"@nestjs/microservices@7.5.1":
   version "7.5.1"
   resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-7.5.1.tgz#d9f15722ddf0c1beb0b897a3084a7fbc734a9738"
   integrity sha512-hKP47RlzcEH61aPqLh64HAKC5sFxrqfg64t8uz9J/ObZmYSDoFvf6NI4HgfRzqNf8+P3XTPbixJAwYoJShMx8w==
@@ -5505,7 +5505,7 @@ pg-types@^2.1.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-pg@8.5.0, pg@^8.5.0:
+pg@8.5.0:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/pg/-/pg-8.5.0.tgz#c29332763ffd51ce52b07dc20dc2337f4d213d08"
   integrity sha512-h+KHEwce67pAQilZhMCpCx1RC7rR1US7mdjwvKzHRaRxKQxbbFtv5UlwjzqILQ1dwhK+RVGqOVcahE/2KOcaeA==
@@ -5635,10 +5635,10 @@ pretty-format@^26.0.0, pretty-format@^26.6.1:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-primebrick-sdk@^0.113.0:
-  version "0.113.0"
-  resolved "https://registry.yarnpkg.com/primebrick-sdk/-/primebrick-sdk-0.113.0.tgz#a72ad71ea2c2a801234d28d8cf9c9da5bb499e4e"
-  integrity sha512-I6Vysf3vlrQ1bmZIbtOvE6lQXj7cqvum4JS19rWISexSpptYDjFLD7DgfMa9xEwiQi+1APnWzogLUYRPkEdrKQ==
+primebrick-sdk@0.125.0:
+  version "0.125.0"
+  resolved "https://registry.yarnpkg.com/primebrick-sdk/-/primebrick-sdk-0.125.0.tgz#f048b8eb50733a6c0610d6aa6d41cf46a657769b"
+  integrity sha512-UHoc660Wc+SRq8bvRobUP9lUucuG+hbbwITucsz2flmGYOko1AIYDIqCNc/OH/2XfqkrS24ZChycUHU8nEqByg==
   dependencies:
     "@nestjs/common" "7.5.1"
     "@nestjs/config" "0.5.0"

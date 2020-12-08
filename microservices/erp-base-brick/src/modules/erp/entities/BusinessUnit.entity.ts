@@ -1,8 +1,9 @@
 import { Entity, Column, ManyToOne, JoinColumn } from 'typeorm';
-import { AudibleEntity } from 'primebrick-sdk';
+import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { BusinessUnitType } from './BusinessUnitType.entity';
 import { Company } from './Company.entity';
 
+@RegisterEntity('erpbase')
 @Entity()
 export class BusinessUnit extends AudibleEntity {
     @Column({
