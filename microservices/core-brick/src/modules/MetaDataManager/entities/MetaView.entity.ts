@@ -1,7 +1,7 @@
 import { Entity, Column } from 'typeorm';
-import { AudibleEntity, EntityModule } from 'primebrick-sdk';
+import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 
-@EntityModule('core')
+@RegisterEntity('core')
 @Entity()
 export class MetaView extends AudibleEntity {
     @Column({
@@ -13,5 +13,3 @@ export class MetaView extends AudibleEntity {
     @Column('json')
     definition: any;
 }
-
-

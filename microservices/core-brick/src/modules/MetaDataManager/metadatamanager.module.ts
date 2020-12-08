@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AdvancedLogger, TenantManagerModule } from 'primebrick-sdk';
+import { AdvancedLogger, SessionManagerModule, TenantManagerModule } from 'primebrick-sdk';
 import { MetadataManagerController } from './metadatamanager.controller';
+import { MetadataManagerSecureController } from './metadatamanager.secure.controller';
 import { MetadataManagerService } from './metadatamanager.service';
 
 @Module({
-    imports: [TenantManagerModule],
-    controllers: [MetadataManagerController],
+    imports: [TenantManagerModule,SessionManagerModule],
+    controllers: [MetadataManagerController, MetadataManagerSecureController],
     providers: [MetadataManagerService, AdvancedLogger],
 })
 export class MetadataManagerModule {}

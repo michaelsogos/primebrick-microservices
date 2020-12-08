@@ -14,8 +14,8 @@
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
     "eslint.alwaysShowStatus": true,
     "eslint.lintTask.enable": true,
-    // "eslint.workingDirectories": ["./src"],
-    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "eslint.workingDirectories": ["./src"],
+    "typescript.tsserver.experimental.enableProjectDiagnostics": false,
     "json.schemas": [
         {
             "fileMatch": ["*-grid.json"],

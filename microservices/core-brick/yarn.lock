@@ -5624,10 +5624,18 @@ pretty-format@^26.5.2:
     ansi-styles "^4.0.0"
     react-is "^16.12.0"
 
-primebrick-sdk@0.122.0:
-  version "0.122.0"
-  resolved "https://registry.yarnpkg.com/primebrick-sdk/-/primebrick-sdk-0.122.0.tgz#12eb8abd4e67db25312008c881ccb264beb4d7a4"
-  integrity sha512-iwwc5Pzz3AUrp1UXFLEYXuovD6Ye7C3PSLDevVwVMPaSdgFbgQu8jJJdQCNj3bGkyTHU13lnPaQYUCBepN4pwg==
+primebrick-commons-core@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/primebrick-commons-core/-/primebrick-commons-core-0.3.0.tgz#817d782e88bbe4452a2dcd5d700a3cbde19202d8"
+  integrity sha512-3DgwZPNsYI/Q7HpgfJ0gHJa7Dw8LmdkdjdpLuwr9InIYyTM4mfzX2jYdK/Wm7atTuagBXjm2/ya/cIVoXiPnJw==
+  dependencies:
+    primebrick-sdk "0.125.0"
+    typeorm "0.2.29"
+
+primebrick-sdk@0.125.0:
+  version "0.125.0"
+  resolved "https://registry.yarnpkg.com/primebrick-sdk/-/primebrick-sdk-0.125.0.tgz#f048b8eb50733a6c0610d6aa6d41cf46a657769b"
+  integrity sha512-UHoc660Wc+SRq8bvRobUP9lUucuG+hbbwITucsz2flmGYOko1AIYDIqCNc/OH/2XfqkrS24ZChycUHU8nEqByg==
   dependencies:
     "@nestjs/common" "7.5.1"
     "@nestjs/config" "0.5.0"

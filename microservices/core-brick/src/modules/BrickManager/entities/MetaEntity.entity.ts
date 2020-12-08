@@ -1,8 +1,8 @@
 import { Entity, Column, ManyToOne, JoinColumn } from 'typeorm';
-import { AudibleEntity, EntityModule } from 'primebrick-sdk';
+import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { MetaBrick } from './MetaBrick.entity';
 
-@EntityModule('core')
+@RegisterEntity('core')
 @Entity()
 export class MetaEntity extends AudibleEntity {
     @Column({
