@@ -1,9 +1,10 @@
+global['appModuleName'] = 'erpbase'; //TODO: @mso -> move it on process.env.BRICK_NAME but pay attention to not confuse it with package.json and in entity MetaBrick.module
+
 import { NestFactory } from '@nestjs/core';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
 import { AppModule } from './app.module';
-import { AdvancedLogger, GlobalExceptionsFilter, RegisterBrick, SessionManagerInterceptor } from 'primebrick-sdk';
+import { AdvancedLogger, GlobalExceptionsFilter, SessionManagerInterceptor } from 'primebrick-sdk';
 
-@RegisterBrick('erpbase')
 class Main {
     static async bootstrap() {
         const advancedLogger = new AdvancedLogger(global['appModuleName'], true);

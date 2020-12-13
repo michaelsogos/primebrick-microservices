@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { Brick, MessagePayload } from 'primebrick-sdk';
+import {  MessagePayload } from 'primebrick-sdk';
 import { ErpService } from './erp.service';
 
 @Controller()
