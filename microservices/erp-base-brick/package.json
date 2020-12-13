@@ -24,8 +24,8 @@
         "test:e2e": "jest --config ./test/jest-e2e.json",
         "migration:create": "typeorm migration:generate -n erp-base-entities",
         "migration:run": "typeorm migration:run",
-        "update:packages": "yarn install",
-        "update:sdk": "yarn add -E primebrick-sdk"
+        "update:sdk": "yarn add -E primebrick-sdk",
+        "update:core-commons": "yarn add -E primebrick-commons-core"
     },
     "dependencies": {
         "@nestjs/common": "7.5.1",
@@ -35,7 +35,7 @@
         "@nestjs/typeorm": "7.1.4",
         "nats": "1.4.12",
         "pg": "8.5.0",
-        "primebrick-sdk": "0.125.0",
+        "primebrick-sdk": "0.135.0",
         "reflect-metadata": "0.1.13",
         "rimraf": "3.0.2",
         "rxjs": "6.6.3",
