@@ -35,7 +35,7 @@ export class BrickManagerService {
                 registeredBrick.brickVersion = brick.version;
                 registeredBrick.code = brick.code;
                 registeredBrick.description = brick.description;
-                registeredBrick.module = brick.module;
+                registeredBrick.module = brick.name;
 
                 registeredBrick = await metaBrickRepository.save(registeredBrick);
             }

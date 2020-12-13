@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Entity, Column, ManyToOne, JoinColumn } from 'typeorm';
 import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { MetaBrick } from './MetaBrick.entity';

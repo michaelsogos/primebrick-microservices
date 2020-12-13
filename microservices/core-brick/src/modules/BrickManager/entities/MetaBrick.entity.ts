@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Entity, Column, OneToMany } from 'typeorm';
 import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { MetaEntity } from './MetaEntity.entity';
@@ -14,7 +15,7 @@ export class MetaBrick extends AudibleEntity {
     @Column({
         nullable: false,
     })
-    module: string;
+    module: string; //TODO: @mso -> change it in name
 
     @Column({
         nullable: false,
