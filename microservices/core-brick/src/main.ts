@@ -1,6 +1,5 @@
 import {} from 'primebrick-sdk/dist/environment';
-import { InitializeBrick } from 'primebrick-sdk';
-InitializeBrick('core');
+process.brickName = 'core';
 
 import { NestFactory } from '@nestjs/core';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';
@@ -9,6 +8,8 @@ import { AdvancedLogger, GlobalExceptionsFilter, SessionManagerInterceptor } fro
 
 class Main {
     static async bootstrap() {
+        if (!process.brickName) throw new Error('Cannot initialize brick with empty or invalid name! process.brickName must be a valid name.');
+
         const advancedLogger = new AdvancedLogger(process.brickName, true);
         const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
             transport: Transport.NATS,
