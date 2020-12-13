@@ -37,7 +37,7 @@
         "nats": "1.4.12",
         "pg": "8.5.0",
         "primebrick-commons-core": "0.3.0",
-        "primebrick-sdk": "0.125.0",
+        "primebrick-sdk": "0.131.0",
         "reflect-metadata": "0.1.13",
         "rimraf": "3.0.2",
         "rxjs": "6.6.3",

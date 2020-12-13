@@ -12,6 +12,7 @@ import {
     Brick,
     MicroserviceModule,
     ProcessorManagerService,
+    MicroserviceManagerModule,
 } from 'primebrick-sdk';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { BrickManagerModule } from './modules/BrickManager/brickmanager.module';
@@ -38,7 +39,8 @@ import { GlobalRouterManagerModule } from './modules/GlobalRouterManager/globalr
         SessionManagerModule,
         BrickManagerModule,
         MetadataManagerModule,
-        GlobalRouterManagerModule
+        GlobalRouterManagerModule,
+        MicroserviceManagerModule,
     ],
     providers: [ConfigService, AudibleEntitySubscriber, AdvancedLogger],
 })

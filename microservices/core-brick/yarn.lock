@@ -5652,6 +5652,26 @@ primebrick-sdk@0.125.0:
     winston "3.3.3"
     winston-daily-rotate-file "4.5.0"
 
+primebrick-sdk@0.131.0:
+  version "0.131.0"
+  resolved "https://registry.yarnpkg.com/primebrick-sdk/-/primebrick-sdk-0.131.0.tgz#52a84bd19967b509c703613032c1584bd162f94a"
+  integrity sha512-a8VgjZN7uVahf8kKBl67TlqZoMZvL5xnY7xV/0V0abx/+VVsE/X+N079ZdhbcyvSbeIEO7H9gNLfr84oWVtl1g==
+  dependencies:
+    "@nestjs/common" "7.5.1"
+    "@nestjs/config" "0.5.0"
+    "@nestjs/core" "7.5.1"
+    "@nestjs/microservices" "7.5.1"
+    "@nestjs/typeorm" "7.1.4"
+    jsonwebtoken "8.5.1"
+    nats "1.4.12"
+    papaparse "5.3.0"
+    pg "8.5.0"
+    reflect-metadata "0.1.13"
+    rxjs "6.6.3"
+    typeorm "0.2.29"
+    winston "3.3.3"
+    winston-daily-rotate-file "4.5.0"
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"

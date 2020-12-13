@@ -25,17 +25,17 @@ export class GlobalRouterManagerService {
             .select(['mb.module'])
             .innerJoin('MetaEntity', 'me', 'me.brick = mb.id')
             .where('me.name = :entityName', { entityName: dataImport.definition.csvOptions.entity });
-        const moduleName = await queryBuilder.getRawOne<string>();
+        const queryResult = await queryBuilder.getRawOne();
 
-        if (!moduleName)
+        if (!queryResult.mb_module)
             throw new RpcException(
-                `Cannot route [dataimport] for entity [${dataImport.definition.csvOptions.entity}] because not registered under any module!`,
+                `Cannot route [data:import] for entity [${dataImport.definition.csvOptions.entity}] because not registered under any module!`,
             );
 
-        if (moduleName == global['appModuleName']) return await this.microserviceManagerService.importData(dataImport);
+        if (queryResult.mb_module == global['appModuleName']) return await this.microserviceManagerService.importData(dataImport);
         else {
             const response = await this.processorManagerService.sendMessage<DataImport, DataImportLog>(
-                ComposeModuleRpcAction(moduleName, ModuleRpcAction.IMPORT_DATA),
+                ComposeModuleRpcAction(queryResult.mb_module, ModuleRpcAction.IMPORT_DATA),
                 dataImport,
             );
 
