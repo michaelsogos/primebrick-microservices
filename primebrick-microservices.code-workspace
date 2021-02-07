@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "microservices\\core-brick"
+		},
+		{
+			"path": "microservices\\primebrick-erp-base-sdk"
+		},
+		{
+			"path": "microservices\\primebrick-erp-saleorder-core"
+		},
+		{
+			"path": "microservices\\erp-base-brick"
+		}
+	]
+}
