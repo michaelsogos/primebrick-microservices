@@ -1,5 +1,5 @@
 import {} from 'primebrick-sdk/dist/environment';
-process.brickName = 'erpbase';
+process.brickName = 'erp_base';
 
 import { NestFactory } from '@nestjs/core';
 import { Transport, MicroserviceOptions } from '@nestjs/microservices';

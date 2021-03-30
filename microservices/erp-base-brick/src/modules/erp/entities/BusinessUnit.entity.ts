@@ -3,7 +3,7 @@ import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { BusinessUnitType } from './BusinessUnitType.entity';
 import { Company } from './Company.entity';
 
-@RegisterEntity('erpbase')
+@RegisterEntity('erp_base')
 @Entity()
 export class BusinessUnit extends AudibleEntity {
     @Column({

@@ -2,7 +2,7 @@ import { Entity, Column, Unique, OneToMany } from 'typeorm';
 import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { BusinessUnit } from './BusinessUnit.entity';
 
-@RegisterEntity('erpbase')
+@RegisterEntity('erp_base')
 @Entity()
 @Unique(['name', 'value'])
 export class BusinessUnitType extends AudibleEntity {

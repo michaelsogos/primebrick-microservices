@@ -1,0 +1,19 @@
+{
+    "search.exclude": {
+        "**/dist": true,
+        "**/node_modules": true
+    },
+    "files.watcherExclude": {
+        "**/dist/**": true,
+        "**/node_modules/**": true
+    },
+    "prettier.printWidth": 150,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "typescript.format.semicolons": "insert",
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    // "eslint.workingDirectories": ["./src"],
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true
+}
