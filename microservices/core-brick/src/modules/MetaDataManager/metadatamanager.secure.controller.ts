@@ -1,9 +1,9 @@
 import { Controller, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { AuthGuard, MessagePayload, ViewDefinition } from 'primebrick-sdk';
+import { MetaMenuItem } from './entities/MetaMenuItem.entity';
 import { MetaView } from './entities/MetaView.entity';
 import { MetadataManagerService } from './metadatamanager.service';
-import { MetaMenuItem } from 'primebrick-commons-core';
 
 @Controller()
 @UseGuards(AuthGuard)

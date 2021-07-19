@@ -1,4 +1,3 @@
-import {} from 'primebrick-sdk/dist/environment';
 process.brickName = 'core';
 
 import { NestFactory } from '@nestjs/core';
@@ -22,7 +21,7 @@ class Main {
         app.useGlobalFilters(new GlobalExceptionsFilter());
         app.useGlobalInterceptors(new SessionManagerInterceptor());
 
-        app.listen(() => advancedLogger.info('Core brick listening'));
+        app.listen().then(() => advancedLogger.info('Core brick listening'));
     }
 }
 

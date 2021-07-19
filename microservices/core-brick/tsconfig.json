@@ -12,7 +12,7 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "incremental": false,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
     },
     "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
 }

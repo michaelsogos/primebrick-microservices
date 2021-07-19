@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { SessionManagerService, TenantRepositoryService, ViewDefinition } from 'primebrick-sdk';
 import { Brackets, In } from 'typeorm';
+import { Role } from '../AuthenticationManager/entities/Role.entity';
+import { MetaMenuItem } from './entities/MetaMenuItem.entity';
 import { MetaTranslation } from './entities/MetaTranslation.entity';
 import { MetaView } from './entities/MetaView.entity';
-import { MetaMenuItem, Role } from 'primebrick-commons-core';
 
 @Injectable()
 export class MetadataManagerService {

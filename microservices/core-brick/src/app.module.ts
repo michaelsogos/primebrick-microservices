@@ -29,7 +29,7 @@ import { GlobalRouterManagerModule } from './modules/GlobalRouterManager/globalr
             load: [loadConfig],
         }),
         TypeOrmModule.forRootAsync({
-            name: 'primebrick_coordinator',
+            name: process.env.DB_DATABASE,
             imports: [ConfigModule],
             inject: [ConfigService],
             useClass: TypeOrmConfigService,
