@@ -1,6 +1,7 @@
 import { Controller, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { AuthGuard, MessagePayload, ViewDefinition } from 'primebrick-sdk';
+import { AppManifest, AuthGuard, GlobalRpcAction, MessagePayload, ViewDefinition } from 'primebrick-sdk';
+import { BrickManagerService } from '../BrickManager/brickmanager.service';
 import { MetaMenuItem } from './entities/MetaMenuItem.entity';
 import { MetaView } from './entities/MetaView.entity';
 import { MetadataManagerService } from './metadatamanager.service';
@@ -8,9 +9,9 @@ import { MetadataManagerService } from './metadatamanager.service';
 @Controller()
 @UseGuards(AuthGuard)
 export class MetadataManagerSecureController {
-    constructor(private readonly metadataManagerService: MetadataManagerService) {}
+    constructor(private readonly metadataManagerService: MetadataManagerService, private readonly brickManagerService: BrickManagerService) {}
 
-    @MessagePattern('view:register')
+    @MessagePattern(GlobalRpcAction.REGISTER_VIEW)
     async registerView(message: MessagePayload<ViewDefinition>): Promise<MessagePayload<boolean>> {
         const result = await this.metadataManagerService.registerView(message.data);
         return MessagePayload.wrap(result);
@@ -34,15 +35,26 @@ export class MetadataManagerSecureController {
         return MessagePayload.wrap(result);
     }
 
-    @MessagePattern('info')
-    async getAppInfo(): Promise<MessagePayload<any>> {
-        //TODO: @mso -> Collect those information from DB or external JSON (not from package json in order to be customizable from ISV)
-        return MessagePayload.wrap({
-            description: 'PrimeBrick',
-            version: '0.1.0',
-            author: 'GuruStudioWeb',
-            copyright: 'MIT',
-            supportURL: 'http://primebrick.io',
-        });
+    @MessagePattern(GlobalRpcAction.GET_APP_MANIFEST)
+    async getAppManifest(): Promise<MessagePayload<AppManifest>> {
+        //TODO: @mso -> Collect those information from DB or ENV file or external JSON (not from package json in order to be customizable from ISV)
+
+        const appManifest = new AppManifest();
+        appManifest.author = 'GuruStudioWeb';
+        appManifest.copyright = 'MIT';
+        appManifest.documentationURL = 'https://primebrick.io/docs';
+        appManifest.name = 'PrimeBrick';
+        appManifest.supportURL = 'https://primebrick.io/support';
+        appManifest.version = '0.1.0';
+
+        const bricks = await this.brickManagerService.getInstalledBrick();
+        for (const brick of bricks)
+            appManifest.installedBricks.push({
+                code: brick.code,
+                name: brick.module,
+                version: brick.brickVersion,
+            });
+
+        return MessagePayload.wrap(appManifest);
     }
 }

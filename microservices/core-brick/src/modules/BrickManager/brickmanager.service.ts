@@ -67,4 +67,11 @@ export class BrickManagerService {
             throw new RpcException(ex.stack);
         }
     }
+
+    async getInstalledBrick(): Promise<MetaBrick[]> {
+        const metaBrickRepository = await this.repositoryService.getTenantRepository(MetaBrick);
+        return await metaBrickRepository.find({
+            select: ['brickVersion', 'code', 'module'],
+        });
+    }
 }

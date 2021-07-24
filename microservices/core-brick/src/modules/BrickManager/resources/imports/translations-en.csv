@@ -1,32 +1,32 @@
 key;languageCode;value;isTemplate;group
-yes;en;Yes;false;
-no;en;No;false;
-ok;en;Ok;false;
-cancel;en;Cancel;false;
+yes;en;Yes;false;core
+no;en;No;false;core
+ok;en;Ok;false;core
+cancel;en;Cancel;false;core
 login;en;Login;false;login
 login-hint;en;Enter credentials to access;false;login
 username;en;Username;false;login
 password;en;Password;false;login
 login-failed;en;Invalid credentials;false;login
-not-valid-input-field;en;The field ${name} is not valid:;true;
-new;en;New;false;
-delete;en;Delete;false;
-archive;en;Archive;false;
-refresh;en;Refresh;false;
-search;en;Search;false;
-key;en;Key;false;
-language-code;en;Language Code;false;
-translation;en;Translation;false;
-group;en;Group;false;
-template;en;Template;false;
-translations;en;Translations;false;
-menu-admin;en;Settings;false;
-menu-admin-translations;en;Translations;false;
-menu-admin-navigation;en;Navigation;false;
-save;en;Save;false;
-info;en;Information;false;
-menu-admin-bricks;en;Modules;false;
-description;en;Description;false;
-code;en;Code;false;
-version;en;Version;false;
-auto-install;en;Auto Install;false;
+not-valid-input-field;en;The field ${name} is not valid:;true;core
+new;en;New;false;core
+delete;en;Delete;false;core
+archive;en;Archive;false;core
+refresh;en;Refresh;false;core
+search;en;Search;false;core
+key;en;Key;false;core
+language-code;en;Language Code;false;core
+translation;en;Translation;false;core
+group;en;Group;false;core
+template;en;Template;false;core
+translations;en;Translations;false;core
+menu-admin;en;Settings;false;core
+menu-admin-translations;en;Translations;false;core
+menu-admin-navigation;en;Navigation;false;core
+save;en;Save;false;core
+info;en;Information;false;core
+menu-admin-bricks;en;Modules;false;core
+description;en;Description;false;core
+code;en;Code;false;core
+version;en;Version;false;core
+auto-install;en;Auto Install;false;core

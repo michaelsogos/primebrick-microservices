@@ -1,32 +1,32 @@
 key;languageCode;value;isTemplate;group
-yes;it;Sì;false;
-no;it;No;false;
-ok;it;Ok;false;
-cancel;it;Annulla;false;
+yes;it;Sì;false;core
+no;it;No;false;core
+ok;it;Ok;false;core
+cancel;it;Annulla;false;core
 login;it;Accesso;false;login
 login-hint;it;Inserire le credenziali per accedere;false;login
 username;it;Nome Utente;false;login
 password;it;Password;false;login
 login-failed;it;Credenziali non valide;false;login
-not-valid-input-field;it;Il campo ${name} non è valido:;true;
-new;it;Nuovo;false;
-delete;it;Elimina;false;
-archive;it;Archivia;false;
-refresh;it;Aggiorna;false;
-search;it;Cerca;false;
-key;it;Chiave;false;
-language-code;it;Codice Lingua;false;
-translation;it;Traduzione;false;
-group;it;Gruppo;false;
-template;it;Modello;false;
-translations;it;Traduzioni;false;
-menu-admin;it;Impostazioni;false;
-menu-admin-translations;it;Traduzioni;false;
-menu-admin-navigation;it;Navigazione;false;
-save;it;Salva;false;
-info;it;Informazioni;false;
-menu-admin-bricks;it;Moduli;false;
-description;it;Descrizione;false;
-code;it;Codice;false;
-version;it;Versione;false;
-auto-install;it;Auto Installante;false;
+not-valid-input-field;it;Il campo ${name} non è valido:;true;core
+new;it;Nuovo;false;core
+delete;it;Elimina;false;core
+archive;it;Archivia;false;core
+refresh;it;Aggiorna;false;core
+search;it;Cerca;false;core
+key;it;Chiave;false;core
+language-code;it;Codice Lingua;false;core
+translation;it;Traduzione;false;core
+group;it;Gruppo;false;core
+template;it;Modello;false;core
+translations;it;Traduzioni;false;core
+menu-admin;it;Impostazioni;false;core
+menu-admin-translations;it;Traduzioni;false;core
+menu-admin-navigation;it;Navigazione;false;core
+save;it;Salva;false;core
+info;it;Informazioni;false;core
+menu-admin-bricks;it;Moduli;false;core
+description;it;Descrizione;false;core
+code;it;Codice;false;core
+version;it;Versione;false;core
+auto-install;it;Auto Installante;false;core

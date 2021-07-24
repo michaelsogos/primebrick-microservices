@@ -20,6 +20,7 @@ import { BrickManagerService } from './modules/BrickManager/brickmanager.service
 import { Tenant } from 'primebrick-sdk/dist/modules/TenantManager/entities/Tenant.entity';
 import { MetadataManagerModule } from './modules/MetaDataManager/metadatamanager.module';
 import { GlobalRouterManagerModule } from './modules/GlobalRouterManager/globalroutermanager.module';
+import { AuthenticationManagerModule } from './modules/AuthenticationManager/authenticationmanager.module';
 
 @Module({
     imports: [
@@ -41,6 +42,7 @@ import { GlobalRouterManagerModule } from './modules/GlobalRouterManager/globalr
         MetadataManagerModule,
         GlobalRouterManagerModule,
         MicroserviceManagerModule,
+        AuthenticationManagerModule
     ],
     providers: [ConfigService, AudibleEntitySubscriber, AdvancedLogger],
 })

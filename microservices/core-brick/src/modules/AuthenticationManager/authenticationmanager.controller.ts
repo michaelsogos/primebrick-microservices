@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { AuthTokenPayload, MessagePayload } from 'primebrick-sdk';
+import { AuthTokenPayload, GlobalRpcAction, MessagePayload } from 'primebrick-sdk';
 import { UserCredentials } from './models/UserCredentials';
 import { MessagePattern, RpcException } from '@nestjs/microservices';
 import { AuthenticationManagerService } from './authenticationmanager.service';
@@ -8,13 +8,13 @@ import { AuthenticationManagerService } from './authenticationmanager.service';
 export class AuthenticationManagerController {
     constructor(private readonly authenticationManagerService: AuthenticationManagerService) {}
 
-    @MessagePattern('auth:login')
+    @MessagePattern(GlobalRpcAction.AUTH_LOGIN)
     async login(credentials: MessagePayload<UserCredentials>): Promise<MessagePayload<AuthTokenPayload>> {
         const result = await this.authenticationManagerService.login(credentials.data);
         return MessagePayload.wrap(result);
     }
 
-    @MessagePattern('auth:refresh_token')
+    @MessagePattern(GlobalRpcAction.AUTH_REFRESH_TOKEN)
     async refreshToken(authTokenPayload: MessagePayload<AuthTokenPayload>): Promise<MessagePayload<AuthTokenPayload>> {
         if (!authTokenPayload.data.access_token) throw new RpcException('Access token missing on MessagePayload data!');
 
