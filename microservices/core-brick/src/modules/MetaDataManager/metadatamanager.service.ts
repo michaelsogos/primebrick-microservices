@@ -47,10 +47,14 @@ export class MetadataManagerService {
         }
     }
 
-    async getTranslations(group: string): Promise<MetaTranslation[]> {
+    async getTranslations(group: string, languageCode?: string): Promise<MetaTranslation[]> {
         const translationRepository = await this.repositoryService.getTenantRepository(MetaTranslation);
         const query = translationRepository.createQueryBuilder('t');
-        const sessionContext = this.sessionManagerService.getContext();
+
+        if (!languageCode) {
+            const sessionContext = this.sessionManagerService.getContext();
+            languageCode = sessionContext.languageCode;
+        }
 
         if (group) query.where('t.group = :group', { group: group });
         else {
@@ -61,7 +65,7 @@ export class MetadataManagerService {
                 }),
             );
         }
-        query.andWhere('t.languageCode = :languageCode', { languageCode: sessionContext.languageCode });
+        query.andWhere('t.languageCode = :languageCode', { languageCode });
 
         query.select(['t.isTemplate', 't.key', 't.value']);
 

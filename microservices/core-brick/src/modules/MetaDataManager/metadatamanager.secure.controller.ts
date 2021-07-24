@@ -17,19 +17,19 @@ export class MetadataManagerSecureController {
         return MessagePayload.wrap(result);
     }
 
-    @MessagePattern('view:all')
+    @MessagePattern(GlobalRpcAction.GET_ALL_VIEWS)
     async getAllViews(): Promise<MessagePayload<MetaView[]>> {
         const result = await this.metadataManagerService.getAllViews();
         return MessagePayload.wrap(result);
     }
 
-    @MessagePattern('view:get')
+    @MessagePattern(GlobalRpcAction.GET_VIEW)
     async getView(message: MessagePayload<string>): Promise<MessagePayload<MetaView>> {
         const result = await this.metadataManagerService.getView(message.data);
         return MessagePayload.wrap(result);
     }
 
-    @MessagePattern('sidemenu:get')
+    @MessagePattern(GlobalRpcAction.GET_SIDEMENU)
     async getSideMenu(): Promise<MessagePayload<MetaMenuItem[]>> {
         const result = await this.metadataManagerService.getMenuItems();
         return MessagePayload.wrap(result);
@@ -46,6 +46,7 @@ export class MetadataManagerSecureController {
         appManifest.name = 'PrimeBrick';
         appManifest.supportURL = 'https://primebrick.io/support';
         appManifest.version = '0.1.0';
+        appManifest.installedBricks = [];
 
         const bricks = await this.brickManagerService.getInstalledBrick();
         for (const brick of bricks)
