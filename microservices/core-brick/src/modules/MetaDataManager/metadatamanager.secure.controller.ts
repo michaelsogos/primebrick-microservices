@@ -2,9 +2,9 @@ import { Controller, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { AppManifest, AuthGuard, GlobalRpcAction, MessagePayload, ViewDefinition } from 'primebrick-sdk';
 import { BrickManagerService } from '../BrickManager/brickmanager.service';
-import { MetaMenuItem } from './entities/MetaMenuItem.entity';
 import { MetaView } from './entities/MetaView.entity';
 import { MetadataManagerService } from './metadatamanager.service';
+import { MenuItemResponse } from './models/MenuItemResponse';
 
 @Controller()
 @UseGuards(AuthGuard)
@@ -30,7 +30,7 @@ export class MetadataManagerSecureController {
     }
 
     @MessagePattern(GlobalRpcAction.GET_SIDEMENU)
-    async getSideMenu(): Promise<MessagePayload<MetaMenuItem[]>> {
+    async getSideMenu(): Promise<MessagePayload<MenuItemResponse[]>> {
         const result = await this.metadataManagerService.getMenuItems();
         return MessagePayload.wrap(result);
     }
