@@ -2,6 +2,7 @@
     "name": "translations-grid",
     "labelKey": "translations",
     "definition": {
+        "brick": "core",
         "entity": "MetaTranslation",
         "type": "grid",
         "fields": [
@@ -110,7 +111,7 @@
     },
     "highlighters": [
         {
-            "expression": "group == 'main'",
+            "expression": "group == 'login'",
             "backgroundColor": "red",
             "fontColor": "white",
             "fontWeight": "bold",

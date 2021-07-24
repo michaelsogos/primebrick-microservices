@@ -30,3 +30,7 @@ description;it;Descrizione;false;core
 code;it;Codice;false;core
 version;it;Versione;false;core
 auto-install;it;Auto Installante;false;core
+contains;it;Contiene;false;core
+starts-with;it;Inizia con;false;core
+ends-with;it;Finisce con;false;core
+add-new-record;it;Nuovo Record;false;core
