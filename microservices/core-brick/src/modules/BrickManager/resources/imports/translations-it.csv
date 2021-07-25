@@ -34,3 +34,20 @@ contains;it;Contiene;false;core
 starts-with;it;Inizia con;false;core
 ends-with;it;Finisce con;false;core
 add-new-record;it;Nuovo Record;false;core
+edit;it;Modifica;false;core
+created-on;it;Creato il;false;core
+created-by;it;Creato da;false;core
+updated-on;it;Modificato il;false;core
+updated-by;it;Modificato da;false;core
+deleted-on;it;Archiviato il;false;core
+deleted-by;it;Archiviato da;false;core
+imported-on;it;Importato il;false;core
+imported-by;it;Importato da;false;core
+delete-record-dialog-title;it;Conferma eliminazione record;false;core
+record;it;Record;false;core
+delete-record-dialog-message;it;Sei sicuro di voler eliminare il record (operazione irreversibile) ?;false;core
+delete-entity-dialog-title;it;Conferma eliminazione ${entityName};true;core
+delete-entity-dialog-message;it;Sei sicuro di voler eliminare l'entità '${entityName}' (operazione irreversibile) ?;true;core
+selected-records;it;Record selezionati;false;core
+invalid-action;it;Azione non valida;false;core
+no-rows-selected;it;Selezionare almeno un record!;false;core

@@ -34,3 +34,20 @@ contains;en;Contains;false;core
 starts-with;en;Starts with;false;core
 ends-with;en;Ends with;false;core
 add-new-record;en;New Record;false;core
+edit;en;Edit;false;core
+created-on;en;Created on;false;core
+created-by;en;Created by;false;core
+updated-on;en;Updated on;false;core
+updated-by;en;Updated by;false;core
+deleted-on;en;Archived on;false;core
+deleted-by;en;Archived by;false;core
+imported-on;en;Imported on;false;core
+imported-by;en;Imported by;false;core
+delete-record-dialog-title;en;Confirm delete record;false;core
+record;en;Record;false;core
+delete-record-dialog-message;en;Are you sure to delete record (irreversible operation) ?;false;core
+delete-entity-dialog-title;en;Confirm delete ${entityName};true;core
+delete-entity-dialog-message;en;Are you sure to delete entity '${entityName}' (irreversible operation) ?;true;core
+selected-records;en;Selected records;false;core
+invalid-action;en;Invalid action;false;core
+no-rows-selected;en;Select at least one record!;false;core
