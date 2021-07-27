@@ -51,3 +51,5 @@ delete-entity-dialog-message;it;Sei sicuro di voler eliminare l'entità '${entit
 selected-records;it;Record selezionati;false;core
 invalid-action;it;Azione non valida;false;core
 no-rows-selected;it;Selezionare almeno un record!;false;core
+caps-lock-warning;it;Caratteri maiuscolo attivati;false;login
+cancel-delete-operation-message;it;Annullare l'operazione di eliminazione ?;false;core

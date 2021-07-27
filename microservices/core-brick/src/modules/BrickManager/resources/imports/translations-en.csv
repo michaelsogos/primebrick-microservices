@@ -51,3 +51,5 @@ delete-entity-dialog-message;en;Are you sure to delete entity '${entityName}' (i
 selected-records;en;Selected records;false;core
 invalid-action;en;Invalid action;false;core
 no-rows-selected;en;Select at least one record!;false;core
+caps-lock-warning;en;Caps lock enable;false;login
+cancel-delete-operation-message;en;Cancel delete operation ?;false;core

@@ -42,7 +42,7 @@ import { AuthenticationManagerModule } from './modules/AuthenticationManager/aut
         MetadataManagerModule,
         GlobalRouterManagerModule,
         MicroserviceManagerModule,
-        AuthenticationManagerModule
+        AuthenticationManagerModule,
     ],
     providers: [ConfigService, AudibleEntitySubscriber, AdvancedLogger],
 })
@@ -59,8 +59,9 @@ export class AppModule extends MicroserviceModule {
 
     async registerBrick(tenant: Tenant, brick: Brick): Promise<void> {
         try {
-            if (await this.brickManagerService.registerBrick(brick, tenant)) this.logger.debug(`The brick [${brick.code}] has been registered!`);
-            else this.logger.debug(`The brick [${brick.code}] cannot be registered!`);
+            if (await this.brickManagerService.registerBrick(brick, tenant))
+                this.logger.debug(`The brick [${brick.code}] has been registered for tenant [${tenant.code}]!`);
+            else this.logger.debug(`The brick [${brick.code}] cannot be registered for tenant [${tenant.code}]!`);
         } catch (ex) {
             this.logger.error(ex);
         }
