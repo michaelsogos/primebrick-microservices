@@ -53,3 +53,5 @@ invalid-action;en;Invalid action;false;core
 no-rows-selected;en;Select at least one record!;false;core
 caps-lock-warning;en;Caps lock enable;false;login
 cancel-delete-operation-message;en;Cancel delete operation ?;false;core
+archive-entity-dialog-title;en;Confirm archive ${entityName};true;core
+archive-entity-dialog-message;en;Are you sure to archive entity '${entityName}' ?;true;core

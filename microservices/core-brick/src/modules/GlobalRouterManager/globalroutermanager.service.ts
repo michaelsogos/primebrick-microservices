@@ -4,7 +4,7 @@ import {
     ComposeModuleRpcAction,
     DataImport,
     MicroserviceManagerService,
-    ModuleRpcAction,
+    DataRpcAction,
     ProcessorManagerService,
     TenantRepositoryService,
 } from 'primebrick-sdk';
@@ -35,7 +35,7 @@ export class GlobalRouterManagerService {
         if (queryResult.mb_module == process.brickName) return await this.microserviceManagerService.importData(dataImport);
         else {
             const response = await this.processorManagerService.sendMessage<DataImport, DataImportLog>(
-                ComposeModuleRpcAction(queryResult.mb_module, ModuleRpcAction.IMPORT_DATA),
+                ComposeModuleRpcAction(queryResult.mb_module, DataRpcAction.DATA_IMPORT),
                 dataImport,
             );
 
