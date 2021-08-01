@@ -55,3 +55,8 @@ caps-lock-warning;en;Caps lock enable;false;login
 cancel-delete-operation-message;en;Cancel delete operation ?;false;core
 archive-entity-dialog-title;en;Confirm archive ${entityName};true;core
 archive-entity-dialog-message;en;Are you sure to archive entity '${entityName}' ?;true;core
+do-not-show-archived;en;Hide archived;false;core
+show-also-archived;en;Show also archived;false;core
+show-only-archived;en;Show only archived;false;core
+show-more;en;Show more;false;core
+collapse;en;Collapse;false;core

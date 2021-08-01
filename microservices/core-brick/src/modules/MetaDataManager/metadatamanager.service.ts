@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { SessionManagerService, TenantRepositoryService, ViewDefinition } from 'primebrick-sdk';
-import { Brackets, In } from 'typeorm';
+import { Brackets, In, TreeRepository } from 'typeorm';
 import { Role } from '../AuthenticationManager/entities/Role.entity';
 import { MetaMenuItem } from './entities/MetaMenuItem.entity';
 import { MetaTranslation } from './entities/MetaTranslation.entity';
@@ -98,15 +98,18 @@ export class MetadataManagerService {
         //To continue use tree repository logic (that's amazing feature), the @ViewEntity should retrieve just a flat list of ROOT MENU ITEM only
         //the tree repository will do the rest.
 
-        const treeRepostory = metaMenuRepository.manager.getTreeRepository(MetaMenuItem);
+        const treeRepository = metaMenuRepository.manager.getTreeRepository(MetaMenuItem);
 
         const result: MenuItemResponse[] = [];
         for (const role of roles) {
             for (const menu of role.menuItems) {
-                menu.children = await treeRepostory
-                    .createDescendantsQueryBuilder('mi', 'mic', menu)
-                    .select(['mi.labelKey', 'mi.icon', 'mi.color', 'mi.viewName', 'mi.orderPriority', 'mic'])
-                    .getMany();
+                menu.children = await this.getFullMenuItemsTree(treeRepository, menu);
+
+                // await treeRepostory
+                //     .createDescendantsQueryBuilder('mi', 'mic', menu)
+                //     .select(['mi.labelKey', 'mi.icon', 'mi.color', 'mi.viewName', 'mi.orderPriority'])
+                //     .getMany();
+
                 result.push({
                     labelKey: menu.labelKey,
                     icon: menu.icon,
@@ -118,6 +121,28 @@ export class MetadataManagerService {
             }
         }
 
+        console.log(result)
+
         return result;
+    }
+
+    private async getFullMenuItemsTree(
+        treeRepository: TreeRepository<MetaMenuItem>,
+        parentMenuItem: MetaMenuItem,
+        level = 0,
+    ): Promise<MetaMenuItem[]> {
+        if (level >= 6) return [];
+        ++level;
+
+        const desendantsMenuItems = await treeRepository
+            .createDescendantsQueryBuilder('mi', 'mic', parentMenuItem)
+            .select(['mi.id','mi.labelKey', 'mi.icon', 'mi.color', 'mi.viewName', 'mi.orderPriority'])
+            .getMany();
+
+        for (const menuItem of desendantsMenuItems) {
+            menuItem.children = await this.getFullMenuItemsTree(treeRepository, menuItem, level);
+        }
+
+        return desendantsMenuItems;
     }
 }
