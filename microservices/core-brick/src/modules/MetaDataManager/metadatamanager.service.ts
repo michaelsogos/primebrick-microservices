@@ -105,11 +105,6 @@ export class MetadataManagerService {
             for (const menu of role.menuItems) {
                 menu.children = await this.getFullMenuItemsTree(treeRepository, menu);
 
-                // await treeRepostory
-                //     .createDescendantsQueryBuilder('mi', 'mic', menu)
-                //     .select(['mi.labelKey', 'mi.icon', 'mi.color', 'mi.viewName', 'mi.orderPriority'])
-                //     .getMany();
-
                 result.push({
                     labelKey: menu.labelKey,
                     icon: menu.icon,
@@ -120,8 +115,6 @@ export class MetadataManagerService {
                 });
             }
         }
-
-        console.log(result)
 
         return result;
     }
@@ -136,7 +129,7 @@ export class MetadataManagerService {
 
         const desendantsMenuItems = await treeRepository
             .createDescendantsQueryBuilder('mi', 'mic', parentMenuItem)
-            .select(['mi.id','mi.labelKey', 'mi.icon', 'mi.color', 'mi.viewName', 'mi.orderPriority'])
+            .select(['mi.id', 'mi.labelKey', 'mi.icon', 'mi.color', 'mi.viewName', 'mi.orderPriority'])
             .getMany();
 
         for (const menuItem of desendantsMenuItems) {

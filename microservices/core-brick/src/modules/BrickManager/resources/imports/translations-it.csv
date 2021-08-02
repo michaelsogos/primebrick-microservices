@@ -54,9 +54,18 @@ no-rows-selected;it;Selezionare almeno un record!;false;core
 caps-lock-warning;it;Caratteri maiuscolo attivati;false;login
 cancel-delete-operation-message;it;Annullare l'operazione di eliminazione ?;false;core
 archive-entity-dialog-title;it;Conferma archiviazione ${entityName};true;core
-archive-entity-dialog-message;it;Sei sicuro di voler archiviare l'entità'${entityName}' ?;true;core
+archive-entity-dialog-message;it;Sei sicuro di voler archiviare l'entità '${entityName}' ?;true;core
 do-not-show-archived;it;Nascondi archiviati;false;core
 show-also-archived;it;Visualizza anche archiviati;false;core
 show-only-archived;it;Visualizza solo archiviati;false;core
 show-more;it;Mostra di più;false;core
 collapse;it;Comprimi;false;core
+entities-archived-message;it;Sono state archiviate [${count}] entità;true;core
+entity-archived-message;it;L'entità '${entityName}' è stata archiviato;true;core
+entities-deleted-message;it;Sono state eliminate [${count}] entità. L'operazione non è reversibile!;true;core
+entity-deleted-message;it;L'entità '${entityName}' è stata eliminata. L'operazione non è reversibile;true;core
+restore-entity-dialog-title;it;Conferma ripristino ${entityName};true;core
+restore-entity-dialog-message;it;Sei sicuro di voler ripristinare l'entità '${entityName}' ?;true;core
+entities-restored-message;it;Sono state ripristinate [${count}] entità;true;core
+entity-restored-message;it;L'entità '${entityName}' è stata ripristinata;true;core
+restore;it;Ripristina;false;core

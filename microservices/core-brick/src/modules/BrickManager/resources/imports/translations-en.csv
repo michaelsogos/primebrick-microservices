@@ -60,3 +60,12 @@ show-also-archived;en;Show also archived;false;core
 show-only-archived;en;Show only archived;false;core
 show-more;en;Show more;false;core
 collapse;en;Collapse;false;core
+entities-archived-message;en;[${count}] entities have been archived;true;core
+entity-archived-message;en;Entity '${entityName}' has been archived;true;core
+entities-deleted-message;en;[${count}] entities have been deleted. Irreversible operation!;true;core
+entity-deleted-message;en;Entity '${entityName}' has been deleted. Irreversible operation!;true;core
+restore-entity-dialog-title;en;Confirm restore ${entityName};true;core
+restore-entity-dialog-message;en;Are you sure to restore entity '${entityName}' ?;true;core
+entities-restored-message;en;[${count}] entities have been restored;true;core
+entity-restored-message;en;Entity '${entityName}' has been restored;true;core
+restore;en;Restore;false;core
