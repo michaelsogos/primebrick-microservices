@@ -1,12 +1,7 @@
 import { Injectable, NotImplementedException, UnauthorizedException } from '@nestjs/common';
-import {
-    TenantRepositoryService,
-    TenantManagerService,
-    UserProfile,
-    AdvancedLogger,
-    LocalAuthManagerService,
-    AuthTokenPayload,
-} from 'primebrick-sdk';
+import { AdvancedLogger } from 'primebrick-sdk/core';
+import { AuthTokenPayload, UserProfile } from 'primebrick-sdk/models';
+import { LocalAuthManagerService, TenantManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
 import { Login } from './entities/Login.entity';
 import { User } from './entities/User.entity';
 import { UserCredentials } from './models/UserCredentials';

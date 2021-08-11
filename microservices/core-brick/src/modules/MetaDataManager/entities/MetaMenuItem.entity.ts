@@ -1,8 +1,7 @@
+import { AudibleEntity } from 'primebrick-sdk/orm';
 import { Entity, Column, ManyToMany, Tree, TreeParent, TreeChildren } from 'typeorm';
-import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { Role } from '../../AuthenticationManager/entities/Role.entity';
 
-@RegisterEntity('core')
 @Entity({ orderBy: { orderPriority: 'ASC' } })
 @Tree('closure-table')
 export class MetaMenuItem extends AudibleEntity {
@@ -35,6 +34,6 @@ export class MetaMenuItem extends AudibleEntity {
     @TreeChildren()
     children: MetaMenuItem[];
 
-    @ManyToMany((type) => Role, (T) => T.menuItems)
+    @ManyToMany(() => Role, (T) => T.menuItems)
     roles: Role[];
 }

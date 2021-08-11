@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { SessionManagerService, TenantRepositoryService, ViewDefinition } from 'primebrick-sdk';
+import { ViewDefinition } from 'primebrick-sdk/models';
+import { SessionManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
 import { Brackets, In, TreeRepository } from 'typeorm';
 import { Role } from '../AuthenticationManager/entities/Role.entity';
 import { MetaMenuItem } from './entities/MetaMenuItem.entity';

@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+import { AudibleEntity } from 'primebrick-sdk/orm';
 import { Entity, Column, OneToMany } from 'typeorm';
-import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 import { MetaEntity } from './MetaEntity.entity';
 
-@RegisterEntity('core')
 @Entity()
 export class MetaBrick extends AudibleEntity {
     @Column({
@@ -32,6 +30,6 @@ export class MetaBrick extends AudibleEntity {
     })
     autoInstall: boolean;
 
-    @OneToMany((type) => MetaEntity, (T) => T.brick)
+    @OneToMany(() => MetaEntity, (T) => T.brick)
     entities: MetaEntity[];
 }

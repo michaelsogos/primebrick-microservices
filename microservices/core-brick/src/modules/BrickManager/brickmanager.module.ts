@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { TenantManagerModule } from 'primebrick-sdk';
+import { TenantManagerModule } from 'primebrick-sdk/modules';
 import { BrickManagerController } from './brickmanager.controller';
 import { BrickManagerService } from './brickmanager.service';
 

@@ -1,6 +1,8 @@
 import { Controller, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { AppManifest, AuthGuard, GlobalRpcAction, MessagePayload, ViewDefinition } from 'primebrick-sdk';
+import { GlobalRpcAction } from 'primebrick-sdk/enums';
+import { AppManifest, MessagePayload, ViewDefinition } from 'primebrick-sdk/models';
+import { AuthGuard } from 'primebrick-sdk/nest';
 import { BrickManagerService } from '../BrickManager/brickmanager.service';
 import { MetaView } from './entities/MetaView.entity';
 import { MetadataManagerService } from './metadatamanager.service';

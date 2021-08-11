@@ -1,19 +1,5 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import {
-    TenantManagerModule,
-    SessionManagerModule,
-    AdvancedLogger,
-    TypeOrmConfigService,
-    loadConfig,
-    AudibleEntitySubscriber,
-    ProcessorManagerModule,
-    TenantManagerService,
-    Brick,
-    MicroserviceModule,
-    ProcessorManagerService,
-    MicroserviceManagerModule,
-} from 'primebrick-sdk';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { BrickManagerModule } from './modules/BrickManager/brickmanager.module';
 import { BrickManagerService } from './modules/BrickManager/brickmanager.service';
@@ -21,13 +7,24 @@ import { Tenant } from 'primebrick-sdk/dist/modules/TenantManager/entities/Tenan
 import { MetadataManagerModule } from './modules/MetaDataManager/metadatamanager.module';
 import { GlobalRouterManagerModule } from './modules/GlobalRouterManager/globalroutermanager.module';
 import { AuthenticationManagerModule } from './modules/AuthenticationManager/authenticationmanager.module';
+import { AdvancedLogger, ConfigLoader, MicroserviceModule, TypeOrmConfigService } from 'primebrick-sdk/core';
+import {
+    MicroserviceManagerModule,
+    ProcessorManagerModule,
+    ProcessorManagerService,
+    SessionManagerModule,
+    TenantManagerModule,
+    TenantManagerService,
+} from 'primebrick-sdk/modules';
+import { AudibleEntitySubscriber } from 'primebrick-sdk/nest';
+import { Brick } from 'primebrick-sdk/models';
 
 @Module({
     imports: [
         ConfigModule.forRoot({
             isGlobal: true,
             envFilePath: ['.app.config.env', '.logger.config.env', '.db.config.env', '.primebrick.config.env', '.env'],
-            load: [loadConfig],
+            load: [ConfigLoader],
         }),
         TypeOrmModule.forRootAsync({
             name: process.env.DB_DATABASE,

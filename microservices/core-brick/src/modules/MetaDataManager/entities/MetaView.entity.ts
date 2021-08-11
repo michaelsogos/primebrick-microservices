@@ -1,7 +1,6 @@
+import { AudibleEntity } from 'primebrick-sdk/orm';
 import { Entity, Column } from 'typeorm';
-import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
 
-@RegisterEntity('core')
 @Entity()
 export class MetaView extends AudibleEntity {
     @Column({

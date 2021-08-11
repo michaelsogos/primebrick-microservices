@@ -1,6 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { GlobalRpcAction, MessagePayload } from 'primebrick-sdk';
+import { GlobalRpcAction } from 'primebrick-sdk/enums';
+import { MessagePayload } from 'primebrick-sdk/models';
 import { MetaTranslation } from './entities/MetaTranslation.entity';
 import { MetadataManagerService } from './metadatamanager.service';
 

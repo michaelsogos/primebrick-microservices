@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AdvancedLogger, AuthManagerModule, LocalAuthManagerService, TenantManagerModule } from 'primebrick-sdk';
+import { AdvancedLogger } from 'primebrick-sdk/core';
+import { AuthManagerModule, LocalAuthManagerService, TenantManagerModule } from 'primebrick-sdk/modules';
 import { AuthenticationManagerController } from './authenticationmanager.controller';
 import { AuthenticationManagerService } from './authenticationmanager.service';
 

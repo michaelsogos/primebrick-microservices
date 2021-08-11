@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { MicroserviceManagerModule, ProcessorManagerModule, TenantManagerModule } from 'primebrick-sdk';
+import { MicroserviceManagerModule, ProcessorManagerModule, TenantManagerModule } from 'primebrick-sdk/modules';
 import { GlobalRouterManagerController } from './globalroutermanager.controller';
 import { GlobalRouterManagerService } from './globalroutermanager.service';
 

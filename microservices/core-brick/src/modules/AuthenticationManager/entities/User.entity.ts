@@ -1,9 +1,7 @@
-import { Entity, Column, OneToOne, ManyToMany, JoinTable } from 'typeorm';
-// import { Login } from './Login.entity';
-import { AudibleEntity, RegisterEntity } from 'primebrick-sdk';
+import { AudibleEntity } from 'primebrick-sdk/orm';
+import { Entity, Column, ManyToMany, JoinTable } from 'typeorm';
 import { Role } from './Role.entity';
 
-@RegisterEntity('core')
 @Entity()
 export class User extends AudibleEntity {
     @Column({ unique: true })
@@ -21,10 +19,7 @@ export class User extends AudibleEntity {
     @Column({ nullable: true })
     languageCode: string;
 
-    // @OneToOne((type) => Login, (T) => T.user)
-    // login: Login;
-
-    @ManyToMany((type) => Role, (T) => T.users, { eager: true })
+    @ManyToMany(() => Role, (T) => T.users, { eager: true })
     @JoinTable()
     roles: Role[];
 }

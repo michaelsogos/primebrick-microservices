@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
-import { TenantRepositoryService, Brick } from 'primebrick-sdk';
 import { Tenant } from 'primebrick-sdk/dist/modules/TenantManager/entities/Tenant.entity';
+import { Brick } from 'primebrick-sdk/models';
+import { TenantRepositoryService } from 'primebrick-sdk/modules';
 import { In, Not, Repository } from 'typeorm';
 import { MetaBrick } from './entities/MetaBrick.entity';
 import { MetaEntity } from './entities/MetaEntity.entity';

@@ -1,14 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
-import {
-    ComposeModuleRpcAction,
-    DataImport,
-    MicroserviceManagerService,
-    DataRpcAction,
-    ProcessorManagerService,
-    TenantRepositoryService,
-} from 'primebrick-sdk';
 import { DataImportLog } from 'primebrick-sdk/dist/core/models/DataImportLog';
+import { ComposeModuleRpcAction, DataRpcAction } from 'primebrick-sdk/enums';
+import { DataImport } from 'primebrick-sdk/models';
+import { MicroserviceManagerService, ProcessorManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
 
 @Injectable()
 export class GlobalRouterManagerService {

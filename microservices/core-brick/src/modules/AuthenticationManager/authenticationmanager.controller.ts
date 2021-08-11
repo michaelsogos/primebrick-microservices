@@ -1,8 +1,9 @@
 import { Controller } from '@nestjs/common';
-import { AuthTokenPayload, GlobalRpcAction, MessagePayload } from 'primebrick-sdk';
 import { UserCredentials } from './models/UserCredentials';
 import { MessagePattern, RpcException } from '@nestjs/microservices';
 import { AuthenticationManagerService } from './authenticationmanager.service';
+import { GlobalRpcAction } from 'primebrick-sdk/enums';
+import { AuthTokenPayload, MessagePayload } from 'primebrick-sdk/models';
 
 @Controller()
 export class AuthenticationManagerController {

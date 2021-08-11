@@ -69,3 +69,9 @@ restore-entity-dialog-message;it;Sei sicuro di voler ripristinare l'entità '${e
 entities-restored-message;it;Sono state ripristinate [${count}] entità;true;core
 entity-restored-message;it;L'entità '${entityName}' è stata ripristinata;true;core
 restore;it;Ripristina;false;core
+count-items-found;it;${count} elementi trovati;true;core
+no-data-message;it;Nessun dato disponibile;false;core
+italian;it;Italiano;false;core
+english;it;Inglese;false;core
+french;it;Francese;false;core
+spanish;it;Spagnolo;false;core

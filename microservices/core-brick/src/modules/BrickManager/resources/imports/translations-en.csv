@@ -69,3 +69,9 @@ restore-entity-dialog-message;en;Are you sure to restore entity '${entityName}' 
 entities-restored-message;en;[${count}] entities have been restored;true;core
 entity-restored-message;en;Entity '${entityName}' has been restored;true;core
 restore;en;Restore;false;core
+count-items-found;en;${count} items found;true;core
+no-data-message;en;No data available;false;core
+italian;en;Italian;false;core
+english;en;English;false;core
+french;en;French;false;core
+spanish;en;Spanish;false;core

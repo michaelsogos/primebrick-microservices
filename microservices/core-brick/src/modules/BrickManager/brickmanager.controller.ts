@@ -1,6 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { Brick, GlobalRpcAction, MessagePayload } from 'primebrick-sdk';
+import { GlobalRpcAction } from 'primebrick-sdk/enums';
+import { Brick, MessagePayload } from 'primebrick-sdk/models';
 import { BrickManagerService } from './brickmanager.service';
 
 @Controller()

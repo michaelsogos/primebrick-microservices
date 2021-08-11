@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { DataImport, DataImportLog, MessagePayload } from 'primebrick-sdk';
+import { DataImport, DataImportLog, MessagePayload } from 'primebrick-sdk/models';
 import { GlobalRouterManagerService } from './globalroutermanager.service';
 
 @Controller()
