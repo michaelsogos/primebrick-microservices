@@ -75,3 +75,17 @@ italian;en;Italian;false;core
 english;en;English;false;core
 french;en;French;false;core
 spanish;en;Spanish;false;core
+query-error;en;Error while retrieve data;false;core
+filters;en;Filters;false;core
+select-field;en;Select field;false;core
+filters-dialog-title;en;Set filter;false;core
+assemble-filters;en;Assemble;false;core
+filter-and-operator;en;All conditions must be true;false;core
+filter-or-operator;en;At least one condition must be true;false;core
+type-value;en;Type a value;false;core
+equals-to;en;Equals to;false;core
+select-value;en;Select a value;false;core
+reset;en;Reset;false;core
+apply;en;Apply;false;core
+select-operator;en;Select an operator;false;core
+applied-filters-text;en;${count} filters applied;true;core

@@ -75,3 +75,17 @@ italian;it;Italiano;false;core
 english;it;Inglese;false;core
 french;it;Francese;false;core
 spanish;it;Spagnolo;false;core
+query-error;it;Errore nel recuperare i dati;false;core
+filters;it;Filtri;false;core
+select-field;it;Seleziona Campo;false;core
+filters-dialog-title;it;Imposta filtri;false;core
+assemble-filters;it;Raggruppa;false;core
+filter-and-operator;it;Tutte le condizioni devono essere vere;false;core
+filter-or-operator;it;Almeno una condizione deve essere vera;false;core
+type-value;it;Inserisci un valore;false;core
+equals-to;it;Uguale a;false;core
+select-value;it;Seleziona un valore;false;core
+reset;it;Reimposta;false;core
+apply;it;Applica;false;core
+select-operator;it;Seleziona un operatore;false;core
+applied-filters-text;it;${count} filtri applicati;true;core
