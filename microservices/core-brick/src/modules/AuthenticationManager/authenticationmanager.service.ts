@@ -1,7 +1,6 @@
 import { Injectable, NotImplementedException, UnauthorizedException } from '@nestjs/common';
-import { AdvancedLogger } from 'primebrick-sdk/core';
 import { AuthTokenPayload, UserProfile } from 'primebrick-sdk/models';
-import { LocalAuthManagerService, TenantManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
+import { LocalAuthManagerService, LogManagerService, TenantManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
 import { Login } from './entities/Login.entity';
 import { User } from './entities/User.entity';
 import { UserCredentials } from './models/UserCredentials';
@@ -12,7 +11,7 @@ export class AuthenticationManagerService {
         private readonly repositoryService: TenantRepositoryService,
         private readonly tenantManagerService: TenantManagerService,
         private readonly localAuthManagerService: LocalAuthManagerService,
-        private readonly logger: AdvancedLogger,
+        private readonly logger: LogManagerService,
     ) {}
 
     async login(credentials: UserCredentials): Promise<AuthTokenPayload> {

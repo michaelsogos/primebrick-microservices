@@ -89,3 +89,9 @@ reset;it;Reimposta;false;core
 apply;it;Applica;false;core
 select-operator;it;Seleziona un operatore;false;core
 applied-filters-text;it;${count} filtri applicati;true;core
+view-type-grid;it;Visualizzazione a tabella;false;core
+view-type-cards;it;Visualizzazione a schede;false;core
+close;it;Chiudi;false;core
+application-message;it;Messaggio Applicativo;false;core
+message-not-defined;it;Messaggio non definito!;false;core
+view-not-found;it;Vista non trovata;false;core

@@ -89,3 +89,9 @@ reset;en;Reset;false;core
 apply;en;Apply;false;core
 select-operator;en;Select an operator;false;core
 applied-filters-text;en;${count} filters applied;true;core
+view-type-grid;en;Table view;false;core
+view-type-cards;en;Cards view;false;core
+close;en;Close;false;core
+application-message;en;Application Message;false;core
+message-not-defined;en;Message not defined!;false;core
+view-not-found;en;View not found;false;core

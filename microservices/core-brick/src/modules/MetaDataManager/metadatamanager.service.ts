@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ViewDefinition } from 'primebrick-sdk/models';
-import { SessionManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
+import { LogManagerService, SessionManagerService, TenantRepositoryService } from 'primebrick-sdk/modules';
 import { Brackets, In, TreeRepository } from 'typeorm';
 import { Role } from '../AuthenticationManager/entities/Role.entity';
 import { MetaMenuItem } from './entities/MetaMenuItem.entity';
@@ -10,7 +10,11 @@ import { MenuItemResponse } from './models/MenuItemResponse';
 
 @Injectable()
 export class MetadataManagerService {
-    constructor(private readonly repositoryService: TenantRepositoryService, private readonly sessionManagerService: SessionManagerService) {}
+    constructor(
+        private readonly repositoryService: TenantRepositoryService,
+        private readonly sessionManagerService: SessionManagerService,
+        private readonly logger: LogManagerService,
+    ) {}
 
     async registerView(viewDefinition: ViewDefinition): Promise<boolean> {
         const metaViewRepository = await this.repositoryService.getTenantRepository(MetaView);
@@ -44,8 +48,10 @@ export class MetadataManagerService {
 
             return view.definition;
         } catch (ex) {
-            //TODO: @michaelsogos -> send error to logging system
-            throw new Error(`View [${viewName}] not found!`);
+            //TODO: @michaelsogos -> send error to external logging system over file
+            ex.message = `View "${viewName}" not found!`;
+            this.logger.error(ex);
+            throw ex;
         }
     }
 

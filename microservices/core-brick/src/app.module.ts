@@ -7,8 +7,10 @@ import { Tenant } from 'primebrick-sdk/dist/modules/TenantManager/entities/Tenan
 import { MetadataManagerModule } from './modules/MetaDataManager/metadatamanager.module';
 import { GlobalRouterManagerModule } from './modules/GlobalRouterManager/globalroutermanager.module';
 import { AuthenticationManagerModule } from './modules/AuthenticationManager/authenticationmanager.module';
-import { AdvancedLogger, ConfigLoader, MicroserviceModule, TypeOrmConfigService } from 'primebrick-sdk/core';
+import { ConfigLoader, MicroserviceModule, TypeOrmConfigService } from 'primebrick-sdk/core';
 import {
+    LogManagerModule,
+    LogManagerService,
     MicroserviceManagerModule,
     ProcessorManagerModule,
     ProcessorManagerService,
@@ -40,15 +42,16 @@ import { Brick } from 'primebrick-sdk/models';
         GlobalRouterManagerModule,
         MicroserviceManagerModule,
         AuthenticationManagerModule,
+        LogManagerModule,
     ],
-    providers: [ConfigService, AudibleEntitySubscriber, AdvancedLogger],
+    providers: [ConfigService, AudibleEntitySubscriber],
 })
 export class AppModule extends MicroserviceModule {
     constructor(
         readonly tenantManagerService: TenantManagerService,
         readonly processorManagerService: ProcessorManagerService,
         readonly brickManagerService: BrickManagerService,
-        readonly logger: AdvancedLogger,
+        readonly logger: LogManagerService,
     ) {
         super(tenantManagerService, processorManagerService, logger);
         super.registerBrick = this.registerBrick;
