@@ -95,3 +95,6 @@ close;en;Close;false;core
 application-message;en;Application Message;false;core
 message-not-defined;en;Message not defined!;false;core
 view-not-found;en;View not found;false;core
+select-field-to-sort;en;Sort by;false;core
+direction;en;Direction;false;core
+select-field-to-filter;en;Filter by;false;core

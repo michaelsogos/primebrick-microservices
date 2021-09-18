@@ -95,3 +95,6 @@ close;it;Chiudi;false;core
 application-message;it;Messaggio Applicativo;false;core
 message-not-defined;it;Messaggio non definito!;false;core
 view-not-found;it;Vista non trovata;false;core
+select-field-to-sort;it;Ordina per;false;core
+direction;it;Direzione;false;core
+select-field-to-filter;it;Filtra per;false;core
